@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_gravity="left|top"
+        android:text="河"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_gravity="right|top"
+        android:text="北"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_gravity="left|bottom"
+        android:text="大"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_gravity="right|bottom"
+        android:text="学 好  "
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%" />
+
+</android.support.percent.PercentFrameLayout>
