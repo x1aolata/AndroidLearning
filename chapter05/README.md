@@ -26,6 +26,7 @@
 -----
 
 ## BroadcastBestPractice——实现强制下线功能
-EditText 密码模式
+EditText 密码模式：
+```
  android:inputType="textPassword"
-
+```
