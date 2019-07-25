@@ -37,19 +37,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 Notification notification = new NotificationCompat.Builder(this, id)
-                        .setContentTitle("This is content title")
-                        .setContentText("This is content textThis is content textThis is content textThis is content textThis is content textThis is content textThis is content textThis is content textThis is content text")
-                        .setWhen(System.currentTimeMillis())
+                        // 必要的
+                        .setContentTitle("我想要")
+                        .setContentText("力量的代价")
+                        // 小图标
                         .setSmallIcon(R.mipmap.ic_launcher)
-                        .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
+                        // 大图标
+                        .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.icon_horn))
+                        // 时间
+                        .setWhen(System.currentTimeMillis())
+
+                        // 跳转的活动或其他
                         .setContentIntent(pi)
+
                         .setAutoCancel(true)
+
+                        // 声音、震动、LED灯
                         //        .setSound(Uri.fromFile(new File("/system/media/audio/ringtones/Luna.ogg")))
                         //        .setVibrate(new long[]{0, 1000, 1000, 1000})
                         //        .setLights(Color.GREEN, 1000, 1000)
                         .setDefaults(NotificationCompat.DEFAULT_ALL)
-                        //        .setStyle(new NotificationCompat.BigTextStyle().bigText("Learn how to build notifications, send and sync data, and use voice actions. Get the official Android IDE and developer tools to build apps for Android."))
-                        //.setStyle(new NotificationCompat.BigPictureStyle().bigPicture(BitmapFactory.decodeResource(getResources(), R.drawable.big_image)))
+
+
+
+                        // 长文字
+                        //.setStyle(new NotificationCompat.BigTextStyle().bigText("Learn how to build notifications, send and sync data, and use voice actions. Get the official Android IDE and developer tools to build apps for Android."))
+
+
+                        // 大图
+                        .setStyle(new NotificationCompat.BigPictureStyle().bigPicture(BitmapFactory.decodeResource(getResources(), R.drawable.bing)))
+
+
+                        // 优先级
                         .setPriority(NotificationCompat.PRIORITY_MAX)
                         .build();
                 manager.notify(1, notification);
