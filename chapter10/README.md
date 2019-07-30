@@ -16,5 +16,12 @@ Handler
 
 ### 服务
 
+活动和服务进行通信
+服务的生命周期
 
+#### 前台服务
+**注意：**  需要前台服务权限
+```
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+```
 
