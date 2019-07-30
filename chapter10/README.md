@@ -19,9 +19,14 @@ Handler
 活动和服务进行通信
 服务的生命周期
 
-#### 前台服务
+### 前台服务
 **注意：**  需要前台服务权限
 ```
   <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 ```
 
+
+### 最佳实践
+
+仍需要前台服务权限
+并且在**DownloadService** 文件中 **getNotification（）** 方法与之前的通知一样，需要更改。
