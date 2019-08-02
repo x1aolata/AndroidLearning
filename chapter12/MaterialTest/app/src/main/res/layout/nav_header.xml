@@ -11,14 +11,14 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/nav_icon" />
+        android:src="@drawable/icon" />
 
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="tonygreendev@gmail.com"
+        android:text="x1aolata8532@gmail.com"
         android:textColor="#FFF"
         android:textSize="14sp" />
 
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/username"
-        android:text="Tony Green"
+        android:text="x1aolata"
         android:textColor="#FFF"
         android:textSize="14sp" />
 
