@@ -69,10 +69,31 @@
 -----
 
 
-##卡片式布局
+## 卡片式布局
+### CardView
+依赖：
+```
+implementation 'com.android.support:recyclerview-v7:28.0.0'
+implementation 'com.android.support:cardview-v7:28.0.0'
+implementation 'com.github.bumptech.glide:glide:4.9.0' //加载图片
+```
+## 下拉刷新
+### SwipeRefreshLayout
+```
+ <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            
+        </android.support.v4.widget.SwipeRefreshLayout>
+```
 
-
+## 可折叠式标题栏
 
 
 
