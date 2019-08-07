@@ -53,5 +53,158 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="方向传感器"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/orientation_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="orientation_x" />
+
+        <TextView
+            android:id="@+id/orientation_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="orientation_y" />
+
+        <TextView
+            android:id="@+id/orientation_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="orientation_z" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="陀螺仪传感器"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/gyroscope_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gyroscope_x" />
+
+        <TextView
+            android:id="@+id/gyroscope_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gyroscope_y" />
+
+        <TextView
+            android:id="@+id/gyroscope_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gyroscope_z" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="线性加速度传感器"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/linearacceleration_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="linearacceleration_x" />
+
+        <TextView
+            android:id="@+id/linearacceleration_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="linearacceleration_y" />
+
+        <TextView
+            android:id="@+id/linearacceleration_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="linearacceleration_z" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="光传感器"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="light" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="压强传感器"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pressure" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计步传感器"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/step_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="step_counter" />
+
+        <TextView
+            android:id="@+id/step_detector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="step_detector" />
+
+
+    </LinearLayout>
 </LinearLayout>
