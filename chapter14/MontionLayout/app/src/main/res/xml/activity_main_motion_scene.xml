@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetStart="@layout/activity_main"
+        app:constraintSetEnd="@layout/activity_main_scene2"
+        app:duration="1000">
+
+        <!--  关联到 bottomBar 上-->
+        <OnSwipe
+            app:touchAnchorId="@id/bottomBar"
+            app:touchAnchorSide="top"
+            app:dragDirection="dragUp"/>
+
+        <OnClick
+            app:targetId="@id/image"
+            app:clickAction="toggle"/>
+
+    </Transition>
+
+</MotionScene>
