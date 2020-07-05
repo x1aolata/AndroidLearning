@@ -6,6 +6,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,11 +16,22 @@ import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
+import com.baidu.mapapi.map.BitmapDescriptor;
+import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.MyLocationData;
+import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.model.inner.GeoPoint;
+import com.baidu.mapapi.search.route.DrivingRoutePlanOption;
+import com.baidu.mapapi.search.route.DrivingRouteResult;
+import com.baidu.mapapi.search.route.OnGetRoutePlanResultListener;
+import com.baidu.mapapi.search.route.PlanNode;
+import com.baidu.mapapi.search.route.RoutePlanSearch;
+import com.baidu.mapapi.search.route.WalkingRouteResult;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,12 +54,37 @@ public class MainActivity extends AppCompatActivity {
 
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.activity_main);
-        mapView = (MapView) findViewById(R.id.bmapView);
-        baiduMap =mapView.getMap();
-        baiduMap.setMyLocationEnabled(true);
 
+
+        mapView = (MapView) findViewById(R.id.bmapView);
+        baiduMap = mapView.getMap();
+
+
+        // 标位置点
+        LatLng point = new LatLng(38.887926, 115.572586);
+        //构建Marker图标
+        BitmapDescriptor bitmap = BitmapDescriptorFactory
+                .fromResource(R.drawable.dw2);
+        //构建MarkerOption，用于在地图上添加Marker
+        OverlayOptions option = new MarkerOptions().position(point).icon(bitmap);
+       //在地图上添加Marker，并显示
+        baiduMap.addOverlay(option);
+
+
+/**
+ * 路线规划
+ */
+
+
+/**
+ *
+ */
+
+        baiduMap.setMyLocationEnabled(true);
         positionText = (TextView) findViewById(R.id.position_text_view);
         List<String> permissionList = new ArrayList<>();
+
+
         if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             permissionList.add(Manifest.permission.ACCESS_FINE_LOCATION);
         }
@@ -63,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             requestLocation();
         }
+
 
     }
 
@@ -137,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     positionText.setText(currentPosition);
                 }
-         });
+            });
             if (location.getLocType() == BDLocation.TypeGpsLocation
                     || location.getLocType() == BDLocation.TypeNetWorkLocation) {
                 navigateTo(location);
@@ -152,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
         option.setScanSpan(1000);
 
         // 强制使用GPS定位
-//        option.setLocationMode(LocationClientOption.LocationMode.Device_Sensors);
+//       option.setLocationMode(LocationClientOption.LocationMode.Device_Sensors);
 
         // 表示需要获取位置的详细信息
         option.setIsNeedAddress(true);
@@ -178,4 +216,5 @@ public class MainActivity extends AppCompatActivity {
         mapView.onDestroy();
         baiduMap.setMyLocationEnabled(false);
     }
+
 }
